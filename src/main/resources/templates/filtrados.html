@@ -25,9 +25,6 @@
 					<input class="form-control" id="campo-filme"type="text" th:name="filme" required>
 					<button class="btn btn-success botao" type="submit">Encontrar Filme</button>
 				</form>
-			</nav>
-				<a class="page-link" id="mais-votados"
-					th:href="@{/{pagina}(pagina=${1})}">MAIS VOTADOS</a>
 		</header>
 		<ul class="pagination justify-content-center">
 			<li class="page-item"><a class="page-link" th:if="${pagina>1}"

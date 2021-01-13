@@ -44,12 +44,6 @@
 	text-transform: uppercase;
 }
 
-#mais-votados {
-	width: 900px;
-	margin: 20px auto;
-	font-size: 3em;
-}
-
 .subtitulo {
 	font-family: monaco;
 	font-weight: bold;
@@ -128,145 +122,151 @@
 	border-radius: 2px;
 }
 
-@media screen and (min-width:1180px) {
-	.fundo {
-		background-color: #1b1d1e;
-	}
-	.titulo {
-		margin: 10px auto 0px auto;
-		font-family: 'cinema_st';
-		font-size: 82px;
-		text-align: center;
-		color: darkgrey;
-	}
-	.subtitulo {
-		text-shadow: 2px 2px 4px black, 0 0 50px tomato, 0 0 10px tomato;
-		font-family: 'cinema_st';
-		text-align: center;
-		color: tomato;
-		position: absolute;
-		top: 92px;
-		right: 100px;
-		font-size: 3em;
-	}
-	.menu {
-		background-color: #2c2f31;
-		margin: 0px auto;
-		width: 89%;
-		padding: 10px;
-		border-radius: 5px;
-	}
-	#mais-votados {
-		color: tomato;
-		width: 180px;
-		background-color: black;
-		text-align: center;
-		border-radius: 5px;
-		margin-left: 5px;
-		height: 44px;
-		border: none;
-		width: 180px;
-		font-weight: bold;
-	}
-	#mais-votados:hover {
-		opacity: 80%;
-	}
-	.botao {
-		margin: 0px 0px 0px 10px;
-		background-color: #f94144;
-		padding: 10px;
-		border: none;
-		width: auto;
-		height: 38px;
-		border-radius: 2px;
-		line-height: 18px;
-	}
-	#campo-filme {
-		width: 300px;
-		height: 38px;
-		font-size: 20px;
-		text-align: left;
-		border-radius: 3px;
-	}
-	.detathes, .titulo-filme, .botao {
-		font-family: monospace;
-		text-transform: uppercase;
-		text-align: center;
-		color: whitesmoke;
-		font-size: 18px;
-		font-weight: bold;
-	}
-	a {
-		color: tomato;
-	}
-	main {
-		width: 96%;
-		margin: 0px auto;
-		margin-top: 10px;
-	}
-	.card {
-		border: none;
-		margin: 20px 0px 40px 45px;
-		box-shadow: 0 8px 16px 0 black, 0 12px 30px 0 black;
-		width: 200px;
-		height: 420px;
-		float: left;
-	}
-	.card:hover {
-		opacity: 70%;
-		border: solid 1px darkgrey;
-	}
-	.titulo-filme {
-		text-transform: uppercase; font-family : monaco;
-		color: silver;
-		text-align: center;
-		padding: 0px;
-		font-family: monaco; color : silver; text-align : center; padding :
-		0px;
-		font-size: 16px;
-	}
-	.detalhes {
-		text-transform: uppercase;
-		padding: 10px;
-		font-size: 16px;
-	}
-	.icone-email, .icone-github, .icone-linkedin, .icone-bitbucket {
-		margin: 20px 0px 0px 10px;
-		width: 40px;
-	}
-	.text-footer {
-		font-size: 18px;
-		color: gray;
-		margin: 5px 0px 0px 15px;
-	}
-	.page-item, .page-link {
-		background-color: #1b1d1e;
-		border-color: grey;
-	}
-	.page-item {
-		font-family: monospace;
-		font-size: 20px;
-		padding: 0px;
-	}
-	.page-link {
-		text-align: center;
-		line-height: 32px;
-		color: white;
-		padding: 10px;
-		width: 52px;
-		height: 52px;
-		margin-top: 10px;
-		border-radius: 2px;
-	}
-	.redes-sociais {
-		position: absolute;
-		top: 2160px;
-		text-align: center;
-		font-size: 20px;
-		width: 100%;
-		height: 160px;
-		padding: 20px;
-		background-color: black;
-		text-align: center;
-	}
+@media
+screen
+and
+(min-width:1180px)
+{
+.fundo {
+	background-color: #1b1d1e;
+}
+
+.titulo {
+	margin: 10px auto 0px auto;
+	font-family: 'cinema_st';
+	font-size: 82px;
+	text-align: center;
+	color: darkgrey;
+}
+
+.subtitulo {
+	text-shadow: 2px 2px 4px black, 0 0 50px tomato, 0 0 10px tomato;
+	font-family: 'cinema_st';
+	text-align: center;
+	color: tomato;
+	position: absolute;
+	top: 92px;
+	right: 100px;
+	font-size: 3em;
+}
+
+.menu {
+	background-color: #2c2f31;
+	margin: 0px auto;
+	width: 89%;
+	padding: 10px;
+	border-radius: 5px;
+}
+.botao {
+	margin: 0px 0px 0px 10px;
+	background-color: #f94144;
+	padding: 10px;
+	border: none;
+	width: auto;
+	height: 38px;
+	border-radius: 2px;
+	line-height: 18px;
+}
+
+#campo-filme {
+	width: 300px;
+	height: 38px;
+	font-size: 20px;
+	text-align: left;
+	border-radius: 3px;
+}
+
+.detathes, .titulo-filme, .botao {
+	text-transform: uppercase;
+	text-align: center;
+	color: whitesmoke;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+a {
+	color: tomato;
+}
+
+main {
+	width: 96%;
+	margin: 0px auto;
+	margin-top: 10px;
+}
+
+.card {
+	border: none;
+	margin: 20px 0px 40px 45px;
+	box-shadow: 0 8px 16px 0 black, 0 12px 30px 0 black;
+	width: 200px;
+	height: 420px;
+	float: left;
+}
+
+.card:hover {
+	opacity: 70%;
+	border: solid 1px darkgrey;
+}
+
+.titulo-filme {
+	height:20px;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: monaco;
+	font-size: 12px;
+	padding: 0px;
+	color: silver;
+}
+
+.detalhes {
+	text-transform: uppercase;
+	font-size: 16px;
+	margin-top: 30px;
+	font-weight: bold;
+}
+
+.icone-email, .icone-github, .icone-linkedin, .icone-bitbucket {
+	margin: 20px 0px 0px 10px;
+	width: 40px;
+}
+
+.text-footer {
+	font-size: 18px;
+	color: gray;
+	margin: 5px 0px 0px 15px;
+}
+
+.page-item, .page-link {
+	background-color: #1b1d1e;
+	border-color: grey;
+}
+
+.page-item {
+	font-family: monospace;
+	font-size: 20px;
+	padding: 0px;
+}
+
+.page-link {
+	text-align: center;
+	line-height: 32px;
+	color: white;
+	padding: 10px;
+	width: 52px;
+	height: 52px;
+	margin-top: 10px;
+	border-radius: 2px;
+}
+
+.redes-sociais {
+	position: absolute;
+	top: 2160px;
+	text-align: center;
+	font-size: 20px;
+	width: 100%;
+	height: 160px;
+	padding: 20px;
+	background-color: black;
+	text-align: center;
+}
 }
