@@ -9,7 +9,7 @@
   <img src="src/main/resources/static/imagens/screenshots/pagina-de-busca.png" width="940px">
 </p>
 <p align="center">
-  <img src="src/main/resources/static/imagens/screenshots/pagina-de-busca.png" width="940px">
+  <img src="src/main/resources/static/imagens/screenshots/detalhes-do-filme.png" width="940px">
 </p>
 
 
