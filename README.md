@@ -2,7 +2,7 @@
 
 ## Esta aplicação exibe a avaliação de filmes.
 
-### E Pode ser acessada em https://avaliacaodefilmesweb.herokuapp.com
+###Acesse em https://avaliacaodefilmesweb.herokuapp.com
 
 
 <p align="center">
