@@ -51,11 +51,12 @@ public class FilmeService {
 		final String url = "https://image.tmdb.org/t/p/w185_and_h278_bestv2";
 		List<Filme> outraLista = new ArrayList<Filme>();
 		filmes.forEach(filme -> {
-			if (filme.getPoster_path() != null)
+			if (filme.getPoster_path() != null) {
 				filme.setPoster_path(url + filme.getPoster_path());
-			else
-				filme.setPoster_path("/imagens/posters/no-image.png");
-			outraLista.add(filme);
+				outraLista.add(filme);				
+			}else {
+				//filme.setPoster_path("/imagens/posters/no-image.png");				
+			}
 		});
 		return outraLista;
 	}
