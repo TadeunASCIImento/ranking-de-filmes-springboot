@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Ranking - Filmes</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/detalhes.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<header>
+			<h1 class="titulo" th:text="${filme.title}"></h1>
+		</header>
+		<main>
+			<div class="caixa-fundo">
+				<img class="fundo" th:src="${filme.backdrop_path}"
+					alt="Imagem de fundo do filme">
+			</div>
+			<ul>
+				<li><p class="rotulo">Data de Lançamento</p>
+					<p class="release_date" th:text="${filme.release_date}"></p></li>
+				<li><p class="rotulo">Popularidade</p>
+					<p class="popularity" th:text="${filme.popularity}"></p></li>
+				<li><p class="rotulo">Votos</p>
+					<p class="vote_count" th:text="${filme.vote_count}"></p></li>
+				<li><p class="rotulo">Nota Média</p>
+					<p class="vote_average" th:text="${filme.vote_average}"></p></li>
+			</ul>
+			<h2 class="subtitulo">Sinopse</h2>
+			<hr>
+			<p class="overview texto" th:text="${filme.overview}"></p>
+			<div class="backdrop">
+				<img class="poster" th:src="${filme.backdrop_path}"
+					alt="Imagem do filme">
+			</div>
+		</main>
+	</div>
+</body>
+
+</html>

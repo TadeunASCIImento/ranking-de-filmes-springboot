@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Ranking - Filmes</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/estilo.css">
+</head>
+
+
+<body class="fundo">
+	<div class="container-fluid">
+		<header>
+			<h1 class="titulo">Ranking de Filmes</h1>
+			<nav class="navbar navbar-expand-sm menu">
+				<form class="form-inline" th:action="@{/{pagina}(pagina=${2})}">
+					<button class="btn btn-success botao" type="submit">Encontrar
+						mais filmes</button>
+				</form>
+			</nav>
+			<h2 class="subtitulo">Mais Votados</h2>
+		</header>
+		<main>
+			<div th:each="filme:${filmes}" class="card fundo">
+				<img class="card-img-top" th:src="${filme.poster_path}"
+					alt="Poster filme">
+				<div class="card-body">
+					<h5 class="titulo-filme" th:text="${filme.title}"></h5>
+					<h6 class=detalhes>
+						<a th:href="@{/detalhar/(id=${filme.id})}">Ver Mais</a>
+					</h6>
+				</div>
+			</div>
+		</main>
+	</div>
+	<footer class="redes-sociais">
+		<a href="https://github.com/TadeunASCIImento"> <img
+			src="/imagens/icones/icone_github.png" class="icone-github" />
+		</a> <a href="mailto:tadeunascimentosp@gmail.com"> <img
+			src="/imagens/icones/icone_email.png" class="icone-email" />
+		</a> <a href="https://linkedin.com/in/tadeu-do-nascimento"> <img
+			src="/imagens/icones/icone_linkedin.png" class="icone-linkedin" />
+		</a>
+		<p class="text-footer">&copy;Desenvolvido por Tadeu do Nascimento</p>
+		<p class="text-footer" th:text="${anoAtual}"></p>
+	</footer>
+</body>
+
+</html>
