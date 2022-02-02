@@ -268,4 +268,11 @@ main {
 	background-color: black;
 	text-align: center;
 }
+
+}
+
+.message-not-found{
+	text-align: center;
+	color: white;
+	margin-top:5em;
 }
