@@ -54,8 +54,6 @@ public class FilmeService {
 			if (filme.getPoster_path() != null) {
 				filme.setPoster_path(url + filme.getPoster_path());
 				outraLista.add(filme);				
-			}else {
-				//filme.setPoster_path("/imagens/posters/no-image.png");				
 			}
 		});
 		return outraLista;
