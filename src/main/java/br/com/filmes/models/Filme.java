@@ -3,16 +3,15 @@ package br.com.filmes.models;
 import java.io.Serializable;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
-@EqualsAndHashCode
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Filme implements Serializable {
-
 	private static final long serialVersionUID = 7889018098711161085L;
 
 	private Integer id;
