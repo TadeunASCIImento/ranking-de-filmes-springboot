@@ -21,7 +21,7 @@
 		<header>
 			<h1 class="titulo">Ranking de Filmes</h1>
 			<nav class="navbar navbar-expand-sm menu">
-				<form class="form-inline" th:action="@{/filtrar/(pagina=${pagina})}">
+				<form class="form-inline" th:action="@{/filtrar/{pagina}/(pagina=${1})}">
 					<input class="form-control" id="campo-filme"type="text" th:name="filme" required>
 					<button class="btn btn-success botao" type="submit">Encontrar Filme</button>
 				</form>
@@ -30,33 +30,33 @@
 		
 		<ul th:if="${totalPaginas}>0"class="pagination justify-content-center">
 			<li class="page-item"><a class="page-link" th:if="${pagina>1}"
-				th:href="@{/filtrar/(filme=${filme},pagina=${1})}">1</a></li>
+				th:href="@{/filtrar/{pagina}/(filme=${filme},pagina=${1})}">1</a></li>
 
 			<li class="page-item"><a class="page-link" th:if="${pagina>2}"
-				th:href="@{/filtrar/(filme=${filme},pagina=${pagina-2})}"><img
+				th:href="@{/filtrar/{pagina}/(filme=${filme},pagina=${pagina-2})}"><img
 					src="/imagens/icones/previous_arrow_icon.png"></a></li>
 
 			<li class="page-item"><a class="page-link" th:if="${pagina>1}"
-				th:href="@{/filtrar/(filme=${filme},pagina=${pagina-1})}"><img
+				th:href="@{/filtrar/{pagina}/(filme=${filme},pagina=${pagina-1})}"><img
 					src="/imagens/icones/previous_icon.png"></a></li>
 
 			<li class="page-item"><a class="page-link"
-				th:href="@{/filtrar/(filme=${filme},pagina=${pagina})}"
+				th:href="@{/filtrar/{pagina}/(filme=${filme},pagina=${pagina})}"
 				th:text="${pagina}"> </a></li>
 
 			<li class="page-item"><a class="page-link"
 				th:if="${pagina<totalPaginas}"
-				th:href="@{/filtrar/(filme=${filme},pagina=${pagina+1})}"><img
+				th:href="@{/filtrar/{pagina}/(filme=${filme},pagina=${pagina+1})}"><img
 					src="/imagens/icones/next_icon.png"> </a></li>
 
 			<li class="page-item"><a class="page-link"
 				th:if="${pagina<totalPaginas}"
-				th:href="@{/filtrar/(filme=${filme},pagina=${pagina+2})}"><img
+				th:href="@{/filtrar/{pagina}/(filme=${filme},pagina=${pagina+2})}"><img
 					src="/imagens/icones/next_arrow_icon.png"></a></li>
 
 			<li class="page-item"><a class="page-link"
 				th:if="${pagina<totalPaginas}"
-				th:href="@{/filtrar/(filme=${filme},pagina=${totalPaginas})}"
+				th:href="@{/filtrar/{pagina}/(filme=${filme},pagina=${totalPaginas})}"
 				th:text="${totalPaginas}"></a></li>
 		</ul>
 		<h1  class="message-not-found"th:if="${totalPaginas<1}">Ops, filme não encontrado!</h1>

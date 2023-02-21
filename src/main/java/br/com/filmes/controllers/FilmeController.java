@@ -1,5 +1,7 @@
 package br.com.filmes.controllers;
 
+import static br.com.filmes.utils.constants.FilmeControllerConstants.TOTAL_PAGE_LIMIT;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +27,7 @@ public class FilmeController {
 		List<Filme> filmes = service.getPoster(service.getFilmes(pagina).getResults());
 		mdv.addObject("filmes", filmes);
 		mdv.addObject("totalPaginas", service.getFilmes(pagina).getTotal_pages());
-		mdv.addObject("anoAtual",service.getDataAtual());
+		mdv.addObject("anoAtual", service.getDataAtual());
 		return mdv;
 	}
 
@@ -34,8 +36,9 @@ public class FilmeController {
 		ModelAndView mdv = new ModelAndView("maisvotados");
 		List<Filme> filmes = service.getPoster(service.getFilmes(pagina).getResults());
 		mdv.addObject("filmes", filmes);
-		mdv.addObject("totalPaginas", service.getFilmes(pagina).getTotal_pages());
-		mdv.addObject("anoAtual",service.getDataAtual());
+		Integer totalPages = service.getFilmes(pagina).getTotal_pages();
+		mdv.addObject("totalPaginas", totalPages > TOTAL_PAGE_LIMIT ? TOTAL_PAGE_LIMIT : totalPages);
+		mdv.addObject("anoAtual", service.getDataAtual());
 		return mdv;
 	}
 
@@ -44,20 +47,20 @@ public class FilmeController {
 		Filme filme = service.detalhar(id);
 		ModelAndView mdv = new ModelAndView("detalhes");
 		mdv.addObject("filme", filme);
-		mdv.addObject("anoAtual",service.getDataAtual());
+		mdv.addObject("anoAtual", service.getDataAtual());
 		return mdv;
 	}
 
-	@RequestMapping(value = "/filtrar/", method = RequestMethod.GET)
-	public ModelAndView filtrar(String filme, Integer pagina) {
+	@RequestMapping(value = "/filtrar/{pagina}/", method = RequestMethod.GET)
+	public ModelAndView filtrar(@PathVariable final Integer pagina, String filme) {
 		ModelAndView mdv = new ModelAndView("filtrados");
-		
+
 		Filmes filmes = service.filtrar(filme, pagina);
 		mdv.addObject("pagina", filmes.getPage());
 		mdv.addObject("filme", filme);
 		mdv.addObject("totalPaginas", filmes.getTotal_pages());
 		mdv.addObject("filmes", service.getPoster(filmes.getResults()));
-		mdv.addObject("anoAtual",service.getDataAtual());
+		mdv.addObject("anoAtual", service.getDataAtual());
 		return mdv;
 	}
 
