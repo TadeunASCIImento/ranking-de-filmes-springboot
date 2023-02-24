@@ -48,7 +48,7 @@ public class FilmeController {
 		return mdv;
 	}
 
-	@RequestMapping(value = "/filtrar/", method = RequestMethod.GET)
+	@RequestMapping(value = "/filtrar/{pagina}", method = RequestMethod.GET)
 	public ModelAndView filtrar(String filme, Integer pagina) {
 		ModelAndView mdv = new ModelAndView("filtrados");
 		

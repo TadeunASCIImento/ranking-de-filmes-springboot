@@ -1,5 +1,8 @@
 @charset "ISO-8859-1";
 
+*{
+	font-family: monaco;
+}
 @font-face {
 	src: url('/fonts/cinema_st.ttf');
 	font-family: 'cinema_st';
@@ -268,4 +271,11 @@ main {
 	background-color: black;
 	text-align: center;
 }
+
+}
+
+.message-not-found{
+	text-align: center;
+	color: white;
+	margin-top:5em;
 }
