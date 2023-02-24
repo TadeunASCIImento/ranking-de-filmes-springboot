@@ -20,7 +20,7 @@
 		<header>
 			<h1 class="titulo">Ranking de Filmes</h1>
 			<nav class="navbar navbar-expand-sm menu">
-				<form class="form-inline" th:action="@{/filtrar/(pagina=${pagina})}">
+				<form class="form-inline" th:action="@{/filtrar/{pagina}/(pagina=${1})}">
 					<input id="campo-filme"class="form-control" type="text" th:name="filme" required>
 					<button class="btn btn-success botao" type="submit">Encontrar Filme</button>
 				</form>
